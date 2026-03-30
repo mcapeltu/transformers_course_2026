@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Block | Transformers 2026</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="container"><h1>Transformer Block Overview</h1><p>Main concepts covered in the theoretical lectures.</p></div></header>
+<nav><div class="container"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="mini-project.html">Mini-Project</a><a class="nav-link" href="deployment.html">Run the Notebook</a></div></nav>
+<main><div class="container">
+  <section class="card">
+    <h2>Topics included</h2>
+    <ul>
+      <li>Sequence modelling tasks: sequence labelling, sequence classification, and autoregressive generation.</li>
+      <li>Embeddings and positional encoding.</li>
+      <li>Self-attention and scaled dot-product attention.</li>
+      <li>Queries, Keys and Values.</li>
+      <li>Transformer block structure: attention, feed-forward, residuals, and layer normalization.</li>
+      <li>Training pipeline with logits, softmax, cross-entropy, and gradient descent.</li>
+      <li>PyTorch implementation of attention.</li>
+      <li>Autoregressive generation and causal masking.</li>
+    </ul>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>Why this block matters</h2>
+      <p>Students move from the conceptual understanding of sequence models to a concrete implementation of a minimal character-level Transformer. The emphasis is not only on formulas but also on tensor shapes, masking logic, and the relationship between the mathematics and the PyTorch code.</p>
+    </article>
+    <article class="card">
+      <h2>Core equations</h2>
+      <pre>Attention(Q, K, V) = softmax((QK^T) / sqrt(d_k)) V</pre>
+      <pre>Masked attention: scores[j &gt; i] = -inf before softmax</pre>
+    </article>
+  </section>
+
+  <section class="card">
+    <h2>Recommended study order</h2>
+    <ol>
+      <li>Understand embeddings and positional information.</li>
+      <li>Study attention as weighted aggregation.</li>
+      <li>Understand why Q/K/V are separate projections.</li>
+      <li>Review scaling by <code>sqrt(d_k)</code>.</li>
+      <li>Study multi-head attention and the Transformer block.</li>
+      <li>Connect the formulas to PyTorch operations.</li>
+      <li>Study autoregressive masking and next-token prediction.</li>
+      <li>Run the mini-project notebook.</li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Download</h2>
+    <p><a href="Transformers.pdf">Download the lecture PDF</a></p>
+  </section>
+</div></main>
+<footer><div class="container">Transformers 2026</div></footer>
+</body>
+</html>

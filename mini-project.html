@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini-Project | Transformers 2026</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="container"><h1>Mini-Project</h1><p>Implementing an Autoregressive Transformer for Character-Level Text Generation (ATChar-LTG)</p></div></header>
+<nav><div class="container"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="syllabus.html">Course Block</a><a class="nav-link" href="deployment.html">Run the Notebook</a></div></nav>
+<main><div class="container">
+
+<section class="card">
+  <h2>General description</h2>
+  <p>In this mini-project, students implement a Transformer model at the character level to generate text by predicting the next character in a sequence. The model is trained with an autoregressive objective, so it learns to predict the next character from the previous context only.</p>
+  <p>The assignment focuses on the scaled dot-product self-attention mechanism discussed in the lectures and on building a complete minimal Transformer pipeline in PyTorch.</p>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h2>Core components to implement</h2>
+    <ul>
+      <li>Token encoding and decoding</li>
+      <li>Token and positional embeddings</li>
+      <li>One masked self-attention head with Q, K, V, and causal masking</li>
+      <li>Multi-head attention</li>
+      <li>Transformer block with attention and feed-forward network</li>
+      <li>Training loop with optimizer and backpropagation</li>
+      <li>Autoregressive text generation</li>
+      <li>Optional inspection of attention weights</li>
+    </ul>
+  </article>
+  <article class="card">
+    <h2>Implementation pipeline</h2>
+    <pre>encode(text)
+→ tensor of token IDs
+→ embeddings
+→ sequence of vectors
+→ self-attention / Transformer blocks
+→ linear layer
+→ logits
+→ predicted next token</pre>
+  </article>
+</section>
+
+<section class="card">
+  <h2>What students should understand by the end</h2>
+  <ul>
+    <li>How a corpus becomes token IDs and then vectors.</li>
+    <li>Why positional embeddings are needed.</li>
+    <li>How the causal mask prevents information leakage from future tokens.</li>
+    <li>How multi-head attention enriches the representation.</li>
+    <li>How logits, cross-entropy, and gradient descent fit into the training loop.</li>
+    <li>How autoregressive generation works one token at a time.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Suggested notebook organization</h2>
+  <ol>
+    <li>Data utilities</li>
+    <li>Vocabulary, <code>stoi</code>, <code>itos</code>, <code>encode()</code>, <code>decode()</code></li>
+    <li>Tensor conversion and dataset split</li>
+    <li><code>get_batch()</code></li>
+    <li>Config and model components</li>
+    <li>Head, MultiHeadAttention, FeedForward, Block</li>
+    <li>CharTransformer</li>
+    <li>Training loop</li>
+    <li>Generation</li>
+    <li>Attention inspection</li>
+  </ol>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h2>Reference resources</h2>
+    <ul>
+      <li><a href="Mini-project_workshop.pdf">Workshop PDF</a></li>
+      <li><a href="notebooks/mini_project_solution_transformer.ipynb">Solution notebook</a></li>
+    </ul>
+  </article>
+  <article class="card">
+    <h2>Success criteria</h2>
+    <ul>
+      <li>The code runs end-to-end.</li>
+      <li>Tensor shapes remain consistent.</li>
+      <li>Training loss decreases.</li>
+      <li>Validation loss is at least reasonably stable.</li>
+      <li>The model generates text.</li>
+      <li>The attention mask blocks future positions.</li>
+    </ul>
+  </article>
+</section>
+
+</div></main>
+<footer><div class="container">Transformers 2026</div></footer>
+</body>
+</html>

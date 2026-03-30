@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Run the Notebook | Transformers 2026</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header><div class="container"><h1>How to Run the Solution Notebook</h1><p>Practical advice for local Jupyter and Google Colab deployment.</p></div></header>
+<nav><div class="container"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="syllabus.html">Course Block</a><a class="nav-link" href="mini-project.html">Mini-Project</a></div></nav>
+<main><div class="container">
+
+<section class="card">
+  <h2>What is included in the notebook</h2>
+  <p>The solution notebook is organized as a complete end-to-end pipeline: configuration, corpus loading, vocabulary extraction, tokenization, train/validation split, batch generation, Transformer components, full model definition, loss estimation, training loop, text generation, and causal-attention inspection.</p>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <h2>Local execution</h2>
+    <ol>
+      <li>Install Python 3.10 or newer.</li>
+      <li>Install Jupyter and PyTorch:</li>
+    </ol>
+    <pre>pip install jupyter torch</pre>
+    <ol start="3">
+      <li>Place the notebook in a working folder.</li>
+      <li>Optionally add an <code>input.txt</code> file with your corpus.</li>
+      <li>Start Jupyter:</li>
+    </ol>
+    <pre>jupyter notebook</pre>
+    <ol start="6">
+      <li>Open <code>mini_project_solution_transformer.ipynb</code>.</li>
+      <li>Run all cells in order.</li>
+    </ol>
+  </article>
+
+  <article class="card">
+    <h2>Google Colab execution</h2>
+    <ol>
+      <li>Upload the notebook to Google Colab.</li>
+      <li>If desired, upload an <code>input.txt</code> file to the runtime working directory.</li>
+      <li>Run all cells in order.</li>
+      <li>If a GPU is needed, enable it in <strong>Runtime → Change runtime type → GPU</strong>.</li>
+    </ol>
+  </article>
+</section>
+
+<section class="card">
+  <h2>Important notebook behavior</h2>
+  <div class="table-like">
+    <strong>Corpus source</strong><div>If <code>input.txt</code> exists, the notebook reads it. Otherwise it falls back to a built-in repeated text sample.</div>
+    <strong>Framework</strong><div>PyTorch</div>
+    <strong>Model type</strong><div>Character-level autoregressive Transformer</div>
+    <strong>Training objective</strong><div>Next-character prediction with cross-entropy loss</div>
+    <strong>Generation</strong><div>Autoregressive sampling with a configurable temperature</div>
+    <strong>Inspection</strong><div>Attention matrices can be extracted to verify causal masking</div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Default hyperparameters in the provided notebook</h2>
+  <pre>batch_size = 32
+block_size = 64
+max_iters = 1000
+eval_interval = 100
+eval_iters = 50
+learning_rate = 3e-4
+n_embd = 128
+n_head = 4
+n_layer = 3
+dropout = 0.1
+train_split = 0.9
+seed = 42
+generate_tokens = 300</pre>
+</section>
+
+<section class="card">
+  <h2>Practical advice</h2>
+  <ul>
+    <li>Run the notebook in order. The later cells depend on earlier definitions.</li>
+    <li>Check tensor shapes if anything fails. Most attention bugs are shape bugs.</li>
+    <li>If training seems too slow, reduce <code>max_iters</code>, <code>n_embd</code>, or <code>n_layer</code>.</li>
+    <li>If the generated text is too repetitive or too chaotic, adjust the generation temperature.</li>
+    <li>To make the task more meaningful, replace the fallback corpus with a richer <code>input.txt</code>.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>Downloads</h2>
+  <ul>
+    <li><a href="notebooks/mini_project_solution_transformer.ipynb">Download/open the solution notebook</a></li>
+    <li><a href="Mini-project_workshop.pdf">Workshop PDF</a></li>
+  </ul>
+</section>
+
+</div></main>
+<footer><div class="container">Transformers 2026</div></footer>
+</body>
+</html>

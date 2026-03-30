@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transformers 2026</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>Transformers 2026</h1>
+    <p>Course material hub for the Transformer block, the workshop, and the mini-project solution.</p>
+    <div class="hero-box">
+      <strong>Mini-project:</strong> Implementing an Autoregressive Transformer for Character-Level Text Generation (ATChar-LTG)
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="syllabus.html">Course Block</a>
+    <a class="nav-link" href="mini-project.html">Mini-Project</a>
+    <a class="nav-link" href="deployment.html">Run the Notebook</a>
+    <a class="nav-link" href="notebooks/mini_project_solution_transformer.ipynb">Solution Notebook</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <section class="grid">
+      <article class="card">
+        <h2>What this site contains</h2>
+        <p>This site brings together the key resources for the 2026 Transformer block: theory, workshop material, the mini-project brief, and a complete reference solution notebook.</p>
+        <div>
+          <span class="tag">Self-attention</span>
+          <span class="tag">Q/K/V</span>
+          <span class="tag">Causal Masking</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">Autoregressive Generation</span>
+        </div>
+      </article>
+      <article class="card">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="Transformers.pdf">Lecture slides: Deep Sequence Modelling and Transformers</a></li>
+          <li><a href="Mini-project_workshop.pdf">Workshop slides: Mini-project workshop</a></li>
+          <li><a href="notebooks/mini_project_solution_transformer.ipynb">Mini-project solution notebook</a></li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Recommended workflow</h2>
+        <ol>
+          <li>Read the theory block.</li>
+          <li>Review the workshop slides.</li>
+          <li>Run the solution notebook locally or in Colab.</li>
+          <li>Inspect the training loop and generation pipeline.</li>
+          <li>Adapt hyperparameters and corpus to test variants.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>General description of the block</h2>
+      <p>The Transformer block covers sequence modelling tasks, embeddings and positional encoding, self-attention and scaled dot-product attention, Queries, Keys and Values, Transformer block architecture, the training pipeline of Transformer models, autoregressive Transformers and causal masking, and a basic implementation of attention in PyTorch.</p>
+      <p>This completes the theoretical part of the course and prepares students for the mini-project implementation phase.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Theory material</h2>
+        <p>The lecture material introduces the three core sequence-modelling tasks, embeddings, positional information, scaled dot-product attention, Transformer blocks, training with cross-entropy, and autoregressive generation with causal masking.</p>
+        <p><a href="syllabus.html">Read the structured summary</a></p>
+      </article>
+      <article class="card">
+        <h2>Workshop material</h2>
+        <p>The workshop presentation gives a guided route from tokenisation to training, generation, and attention-weight inspection, with shape tracking and debugging advice.</p>
+        <p><a href="mini-project.html">Read the mini-project page</a></p>
+      </article>
+      <article class="card">
+        <h2>Deployment guide</h2>
+        <p>The notebook is ready to run with Python and PyTorch, and includes a fallback corpus if <code>input.txt</code> is missing.</p>
+        <p><a href="deployment.html">See setup instructions</a></p>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    Transformers 2026 course site. Static version prepared for GitHub Pages.
+  </div>
+</footer>
+</body>
+</html>

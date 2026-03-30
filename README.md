@@ -32,7 +32,7 @@ GitHub Pages-ready course site for the Transformers 2026 block, including:
 3. In GitHub, go to **Settings → Pages**.
 4. Under **Build and deployment**, choose:
    - **Source:** `Deploy from a branch`
-   - **Branch:** `main`
+   - **Branch:** `thefullmonty`
    - **Folder:** `/ (root)`
 5. Save the configuration.
 6. After a minute or two, your site will be available at:
@@ -65,7 +65,7 @@ pip install torch jupyter
 
 ## Notebook assumptions
 
-The provided solution notebook:
+The provided starter notebook:
 
 - uses **PyTorch**
 - includes a fallback text corpus if `input.txt` is not found

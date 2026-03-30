@@ -1,0 +1,120 @@
+:root {
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --accent: #1d4ed8;
+  --accent-soft: #dbeafe;
+  --border: #e5e7eb;
+  --code: #111827;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: white;
+  padding: 3rem 1.25rem 2.5rem;
+}
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+.nav-link {
+  font-weight: 600;
+  color: var(--text);
+}
+main {
+  padding: 2rem 0 4rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+.hero-box {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  margin-top: 1rem;
+}
+.tag {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  margin: 0 0.35rem 0.35rem 0;
+}
+section {
+  margin-top: 2rem;
+}
+h1, h2, h3 { line-height: 1.2; }
+h1 { margin: 0; font-size: 2.2rem; }
+h2 { margin-top: 0; }
+ul { padding-left: 1.2rem; }
+code, pre {
+  font-family: Consolas, Monaco, monospace;
+}
+pre {
+  background: var(--code);
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow: auto;
+}
+.notice {
+  border-left: 4px solid var(--accent);
+  background: #eff6ff;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 3rem;
+  color: var(--muted);
+}
+.table-like {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0.65rem 1rem;
+}
+@media (max-width: 700px) {
+  .table-like { grid-template-columns: 1fr; }
+  h1 { font-size: 1.8rem; }
+}

@@ -4,7 +4,7 @@ GitHub Pages-ready course site for the **Transformers 2026** block, including:
 
 - general course material overview
 - mini-project brief and expectations
-- deployment and execution notes for the solution notebook
+- deployment and execution notes for the skeleton notebook
 - direct access to the solution code for the mini-project
 - downloadable lecture PDFs
 
@@ -20,7 +20,7 @@ GitHub Pages-ready course site for the **Transformers 2026** block, including:
 ├── assets/
 │   └── style.css
 ├── notebooks/
-│   └── mini_project_solution_transformer.ipynb
+│   └── mini_project_template_transformer.ipynb
 ├── Mini-project_workshop.pdf
 └── Transformers.pdf
 ```

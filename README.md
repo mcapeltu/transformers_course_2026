@@ -74,3 +74,5 @@ The provided starter notebook:
 ## Suggested next step
 
 After uploading the repo, edit the homepage title and the contact details in `index.html` so the public page matches your preferred wording.
+--------------------
+Last updated after reverting student pull request.
